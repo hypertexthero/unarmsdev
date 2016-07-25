@@ -34,12 +34,22 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            
-            <li class=""><a href="/index.html">Home</a></li>
-            <li class=""><a href="/about.html">Archives for the Public</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About the UN Archives<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/about/index.html">About the Archives</a></li>
+                <li><a href="/about/acces.html">Access &amp; Declassification</a></li>
+                <li><a href="/about/publicRef.html">Public Reference Services</a></li>
+                <li><a href="/about/secretariat.html">Secretariat Departments</a></li>
+                <li><a href="/about/predecessorOrg.html">Predecessor Organizations</a></li>
+                <li><a href="/about/guideline.html">Guideline</a> </li>
+                <li><a href="">Search the Archives Online</a></li>
+              </ul>
+            </li>
+            <li class=""><a href="/book.html">Book Reading Room Time</a></li>
             
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records for UN STAFF<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">For UN Staff<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/staffInformation.html">What ARMS can do for you section</a></li>
                 <li><a href="/manageRecords.html">How to manage your records</a></li>
@@ -51,23 +61,21 @@
                 <li><a href="/retentionSchedule.html">Retention Schedules</a></li>
                 <li><a href="/policies.html">Policies and Tools</a></li>
                 <li><a href="/forms.html">FORMS</a></li>
-                
               </ul>
             </li>
           </ul>
-          
-          
-          
-          
-          
-          
-          
-          
-          
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="search" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-info">Search</button>
+          </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
-
+    
+    <div class="breadcrumbs"><span class=""><a href="/index.html">Home</a></span> / </div>
+    <div class="container">
     
   <div class="container">
     <div class="col-lg-6">
@@ -78,6 +86,9 @@
 
   </div>
 
+    
+    
+    </div>
 
     <script src="/static/js/vendor/jquery-1.10.1.js"></script>
     <script src="/static/js/vendor/bootstrap.js"></script>
