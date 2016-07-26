@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="jumbotron">
   <div class="container">
-    <h1>Make this a contact form!</h1>
-    <p>Give your contact info, or use a SaaS solution to add dynamic contact forms to your static website.</p>
-  </div>
+    <div class="col-lg-6">
+    	<h2>Contact</h2>
+    	You can leave a message using the contact form below. <br>
+		If you would like to request a research visit, please be advised that all desks in our reading room are often booked, and so you must contact the archives in advance to ensure that you will be able to do your research. <b>Booking a desk at least 4-6 weeks in advance is preferred.</b> Especially during the months of April - September, we may not be able to accommodate you on short notice.  <br> <br>
+		<i>Occasionally our responses to you are sorted into your email system's spam folder, so please ensure that you check there for any incoming messages. If you do not receive any response within 3 business days, please resubmit your inquiry. </i>
+
+
+	<form action="action_page.php">
+	  <b>Your name:</b><br>
+	  <input type="text" name="name" ><br>
+	  <b>Your e-mail:</b><br>
+	  <input type="text" name="email" ><br>
+	  <b>Subject:</b><br>
+	  <input type="text" name="subject" ><br>
+	  <b>Message:</b><br>
+	  <textarea rows="6" cols="60"></textarea><br><br>
+	  <input type="submit" value="Submit">
+	</form>
+    </div>
 </div>
 {% endblock %}

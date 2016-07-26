@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
     <url>
-        <loc>/about.html</loc>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>/accesRecords.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -71,27 +66,62 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/archives/acces.html</loc>
+        <loc>/about/acces.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/archives/guideline.html</loc>
+        <loc>/about/atoz.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/archives/predecessorOrg.html</loc>
+        <loc>/about/citing.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/archives/publicRef.html</loc>
+        <loc>/about/copies.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>/archives/secretariat.html</loc>
+        <loc>/about/external.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/guideline.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/index.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/missions.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/predecessorOrg.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/publicRef.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/readingRoom.html</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>/about/secretariat.html</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
