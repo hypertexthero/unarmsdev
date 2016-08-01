@@ -2,7 +2,7 @@
 
 ## Things To Do
 
-* Divide content into pages
+* Finish content architecture
 * Find **concepts/pictures/images for each page**
 * Update visual design and look and feel with CSS. Use UN/Arms logo. Look at [Atom.io](http://flight-manual.atom.io/getting-started/sections/why-atom/) page for inspiration
 * Find out why **404 page template is not working**
@@ -10,3 +10,4 @@
 * Fix tab fragment navigation on `/records/index.hml` - see http://stackoverflow.com/a/12131590
 * Make sure blocks of texts are surrounded by `<p>…</p>` tags
 * Fix the bug on Records Management page when displaying information
+* Fix breadcrumbs styling

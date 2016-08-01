@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="container">
-  <div class="col-lg-6">
+<div class="col-lg-6">
     
     <h1>Records</h1>
 
@@ -216,11 +215,17 @@
 {% endblock %}
 
 {% block sidebar %}
-<div class="col-lg-6">
-  <h3>In This Section</h3>
-  <a href="/records/index.html">Managing Records</a> <br>
-  <a href="/records/transfer.html">Transferring Records</a> <br>
-</div>
+{# <div class="col-lg-6"> #}
+{#   <h3>In This Section</h3> #}
+{# <ul class="list-unstyled"> #}
+{#   <li> #}
+{#     <a href="/records/index.html">Managing Records</a> #}
+{#   </li> #}
+{#   <li> #}
+{#     <a href="/records/transfer.html">Transferring Records</a> #}
+{#   </li> #}
+{# </ul> #}
+{# </div> #}
 {% endblock sidebar %}
 
 {% block scripts %}
