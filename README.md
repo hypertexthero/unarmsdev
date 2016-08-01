@@ -9,3 +9,4 @@
 * Decided whether and how to implement **local site search** (look at local JS search plugins for jQuery?)
 * Fix tab fragment navigation on `/records/index.hml` - see http://stackoverflow.com/a/12131590
 * Make sure blocks of texts are surrounded by `<p>…</p>` tags
+* Fix the bug on Records Management page when displaying information
