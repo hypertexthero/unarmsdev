@@ -21,6 +21,17 @@
     </head>
 
     <body>
+    <h1>
+      <a href="/" class="navbar-brand">United Nations Archives and Records Management Section</a>
+    </h1>    
+    <ol class="languages">
+      <li><a href="/ar/">عربي</a></li>
+      <li><a href="/zh/">中文</a></li>
+      <li><a href="/en/">English</a></li>
+      <li><a href="/fr/">Français</a></li>
+      <li><a href="/ru/">Русский</a></li>
+      <li><a href="/es/">Español</a></li>
+    </ol>
     <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -29,12 +40,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{% url "/index.html" %}">UN ARMS</a>
+          {# <a class="navbar-brand" href="{% url "/index.html" %}">UN ARMS</a> #}
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About the UN Archives<b class="caret"></b></a>
+              <a style="margin-left:-15px;" href="#" class="dropdown-toggle" data-toggle="dropdown">About the UN Archives<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/about/index.html">About the Archives</a></li>
                 <li><a href="/about/access.html">Access &amp; Declassification</a></li>
@@ -49,16 +60,9 @@
               </ul>
             </li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Book Reading Room Time<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="/book/index.html">Book Time</a></li>
-                <li><a href="/book/guidelines.html">Guidelines</a></li>
-              </ul>
-
-            {# <li class="{% if_current_page '/readingRoom.html' 'active' '' %}"> #}
-            {#   <a href="{% url '/readingRoom.html' %}">Book Reading Room Time</a> #}
-            {# </li> #}
+            <li class="{% if_current_page '/book/index.html' 'active' '' %}">
+              <a href="/book/">Book Reading Room Time</a>
+            </li>
             
             <li class="{% if_current_page '/contact.html' 'active' '' %}"><a href="{% url '/contact.html' %}">Contact</a></li>
             
@@ -87,14 +91,19 @@
             <div class="form-group">
               <input type="text" placeholder="search" class="form-control">
             </div>
-            <button type="submit" class="btn btn-info">Search</button>
+            <button type="submit" class="btn">Search</button>
           </form>
+          
         </div><!--/.navbar-collapse -->
+        
       </div>
     </div>
-    
-    <div class="breadcrumbs"><span class="{% if_current_page '/index.html' 'active' '' %}"><a href="{% url '/index.html' %}">Home</a></span> / {{ page.title }}</div>
+
     <div class="container">
+    <ol class="breadcrumb">
+      {% block breadcrumbs %}
+      {% endblock breadcrumbs %}
+    </ol>
     {% block body %}
     {% endblock body %}
     {% block sidebar %}

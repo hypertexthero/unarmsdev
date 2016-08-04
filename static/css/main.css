@@ -1,3 +1,18 @@
 /* custom styles to override boostrap go here */
 
 /*:target {background:#ffc;}*/
+
+body {font-family:roboto, "helvetica neue", helvetica, arial, sans-serif;}
+
+.languages {
+padding: 8px 15px;
+margin-bottom: 20px;
+list-style: none;
+/*background-color: #f5f5f5;*/
+border-radius: 4px;
+text-align:right;
+}
+
+.languages > li {display: inline-block;}
+
+.languages > li + li::before {content: " "; padding: 0 5px; color: #cccccc;
