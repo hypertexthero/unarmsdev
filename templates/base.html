@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
-        <style>
-            body {
+  <head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
+    <style>
+        body {
 /*                padding-top: 50px;*/
-                padding-bottom: 20px;
-            }
-            {% block styles %}{% endblock styles %}
-        </style>
-        <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
-        <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
-    </head>
-
-    <body>
-    <h1 id="logo">
-      <a href="/">United Nations Archives and Records Management Section</a>
-    </h1>    
+            padding-bottom: 20px;
+        }
+        {% block styles %}{% endblock styles %}
+    </style>
+    <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
+  </head>
+  <body>
+    <a href="/" title="Go back to the homepage."><img id="logo" src="{% static '/static/images/un-arms-logo.png' %}" width="60" height="51" alt="UN Logo"></a>
+    <h1 id="logotitle">
+      <a href="/" title="Go back to the homepage.">United Nations<br><small>Archives and Records Management Section</small></a>
+    </h1>
+    <h2 class="slogan">Protecting the present<br>Preserving for the future</h2> 
     <ul class="languages">
       <li><a href="/ar/">عربي</a></li>
       <li><a href="/zh/">中文</a></li>
@@ -32,6 +31,12 @@
       <li><a href="/ru/">Русский</a></li>
       <li><a href="/es/">Español</a></li>
     </ul>
+    <form class="navbar-form pull-right">
+      <div class="form-group">
+        <input type="text" placeholder="" class="form-control" size="40">
+      </div>
+      <button type="submit" class="btn">Search</button>
+    </form>
     <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -44,28 +49,28 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li >
+            <li> {# =todo: get this working: class="{% if_current_section '/about/' 'active' ' true' %}" #}
               <a style="margin-left:-15px;" href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li class="{% if_current_page '/about/index.html' 'active' ' active' %}"><a href="/about/index.html">About the Archives</a></li>
-                <li class="{% if_current_page '/about/access.html' 'active' ' active' %}"><a href="/about/access.html">Access &amp; Declassification</a></li>
-                <li><a href="/about/publicRef.html">Public Reference Services</a></li>
-                <li><a href="/about/secretariat.html">Secretariat Departments</a></li>
-                <li><a href="/about/predecessorOrg.html">Predecessor Organizations</a></li>
-                <li><a href="/about/missions.html">Missions, Commissions and Related</a> </li>
-                <li><a href="/about/citing.html">Citing UN Archives</a> </li>
-                <li><a href="/about/copies.html">Getting Copies</a> </li>
-                <li><a href="/about/external.html">External Resources</a> </li>
-                <li><a href="/about/atoz.html">A-Z for Researchers</a> </li>
+                <li class="{% if_current_page '/about/index.html' 'active' '' %}"><a href="/about/index.html">About the Archives</a></li>
+                <li class="{% if_current_page '/about/access.html' 'active' '' %}"><a href="/about/access.html">Access &amp; Declassification</a></li>
+                <li class="{% if_current_page '/about/publicRef.html' 'active' '' %}"><a href="/about/publicRef.html">Public Reference Services</a></li>
+                <li class="{% if_current_page '/about/secretariat.html' 'active' '' %}"><a href="/about/secretariat.html">Secretariat Departments</a></li>
+                <li class="{% if_current_page '/about/predecessorOrg.html' 'active' '' %}"><a href="/about/predecessorOrg.html">Predecessor Organizations</a></li>
+                <li class="{% if_current_page '/about/missions.html' 'active' '' %}"><a href="/about/missions.html">Missions, Commissions and Related</a> </li>
+                <li class="{% if_current_page '/about/citing.html' 'active' '' %}"><a href="/about/citing.html">Citing UN Archives</a> </li>
+                <li class="{% if_current_page '/about/copies.html' 'active' '' %}"><a href="/about/copies.html">Getting Copies</a> </li>
+                <li class="{% if_current_page '/about/external.html' 'active' '' %}"><a href="/about/external.html">External Resources</a> </li>
+                <li class="{% if_current_page '/about/atoz.html' 'active' '' %}"><a href="/about/atoz.html">A-Z for Researchers</a> </li>
               </ul>
             </li>
 
             <li class="{% if_current_page '/book/index.html' 'active' '' %}">
               <a href="/book/">Book Reading Room Time</a>
             </li>
-            
+          
             <li class="{% if_current_page '/contact.html' 'active' '' %}"><a href="{% url '/contact.html' %}">Contact Us</a></li>
-            
+          
             <li class="dropdown{% if_current_page '/records/' ' active' '' %}">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">For UN Staff<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -83,36 +88,45 @@
                 <li><a href="/retentionSchedule.html">Retention Schedules</a></li>
                 <li><a href="/policies.html">Policies and Tools</a></li>
                 <li><a href="/forms.html">Forms</a></li>
-                
+              
               </ul>
             </li>
+            <li class="{% if_current_page '/faq.html' 'active' '' %}"><a href="{% url '/faq.html' %}">FAQ</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="search" class="form-control">
-            </div>
-            <button type="submit" class="btn">Search</button>
-          </form>
+
+          {# search form alternate position #}
+          {# <form class="navbar-form navbar-right"> #}
+          {#   <div class="form-group"> #}
+          {#     <input type="text" placeholder="" class="form-control"> #}
+          {#   </div> #}
+          {#   <button type="submit" class="btn">Search</button> #}
+          {# </form> #}
+          
           
         </div><!--/.navbar-collapse -->
-        
+      
       </div>
     </div>
 
     <div class="container">
-    <ol class="breadcrumb">
-      {% block breadcrumbs %}
-      {% endblock breadcrumbs %}
-    </ol>
-    {% block body %}
-    {% endblock body %}
-    {% block sidebar %}
-    {% endblock sidebar %}
+      <ol class="breadcrumb">
+        {% block breadcrumbs %}
+        {% endblock breadcrumbs %}
+      </ol>
+      {% block body %}
+      {% endblock body %}
+      {% block sidebar %}
+      {% endblock sidebar %}
+    </div>
+    <div class="footer">
+      <div class="container">
+        <hr>
+        <a id="button" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Angered!</a>
+      </div>
     </div>
     <script src="{% static '/static/js/jquery-3.1.0.min.js' %}"></script>
     <script src="{% static '/static/js/bootstrap.min.js' %}"></script>
   </body>
-
-  {% block scripts %}
-  {% endblock %}
+{% block scripts %}
+{% endblock %}
 </html>
