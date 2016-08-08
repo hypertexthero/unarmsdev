@@ -1,7 +1,5 @@
 /* custom styles to override boostrap go here */
 
-/*:target {background:#ffc;}*/
-
 body {font-family:roboto, "helvetica neue", helvetica, arial, sans-serif;}
 
 a:link {color:#4B92DB;} 
@@ -35,3 +33,12 @@ text-align:right;
 .languages > li + li::before {content: " "; padding: 0 5px; color: #cccccc;}
 div.navbar {clear:both; margin-bottom:0;}
 .breadcrumb {background:#fafafa;}
+
+/*.navbarfirst {margin-left:-15px;}*/
+
+@media (min-width: 768px) {
+  .navbar > .container .navbarfirst,
+  .navbar > .container-fluid .navbarfirst {
+    margin-left: -15px;
+  }
+}
