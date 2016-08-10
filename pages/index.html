@@ -6,13 +6,32 @@
 {% endblock breadcrumbs %}
 
 {% block body %}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <div class="container">
     <div class="col-lg-6">
       <h1>UN ARMS <small>United Nations Archives and Records Management Section</small></h1>
-      <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>The Archives and Records Management Section (ARMS) identifies, preserves and provides access to those records that document the history of the United Nations.</p>
+ 
+      <p>ARMS is responsible for all aspects of UN recordkeeping, ranging from measures to ensure that United Nations officials create records in the course of their duties, through the management of records in United Nations offices, to preserving and making records of continuing value accessible as United Nations archives.</p>
+       
+      <p>Most records are created as a result of United Nations business and have a finite value. They can be destroyed when this value has passed. A small percentage of the records is preserved as United Nations archives because they are of enduring value to the United Nations and/or to the public.</p>
+       
+      <p>All United Nations staff members should know that all information they collect or create in the conduct of business, irrespective of its format, is the property of the United Nations.</p>
+       
+      <p>Management of UN records by Secretariat Offices is governed by <a href="">ST/SGB/2007/5.</a></p>
+       
+      <p>ARMS is open to the public. Materials are available for research, teaching, legal proceedings, publication, television and radio programmes, and for general interest.</p>
     </div>
     <div class="col-lg-6">
-      <img class="pull-right" src="/static/images/nesh.jpg" width="400">
+      
+      <div class="fb-page" data-href="https://www.facebook.com/un.arms/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/un.arms/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/un.arms/">Facebook</a></blockquote></div>
     </div>
   </div>
 
