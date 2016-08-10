@@ -10,22 +10,25 @@
   <div class="container">
     <div class="col-lg-6">
     	<h2>Contact</h2>
-    	You can leave a message using the contact form below. <br>
-		If you would like to request a research visit, please be advised that all desks in our reading room are often booked, and so you must contact the archives in advance to ensure that you will be able to do your research. <b>Booking a desk at least 4-6 weeks in advance is preferred.</b> Especially during the months of April - September, we may not be able to accommodate you on short notice.  <br> <br>
-		<i>Occasionally our responses to you are sorted into your email system's spam folder, so please ensure that you check there for any incoming messages. If you do not receive any response within 3 business days, please resubmit your inquiry. </i>
+    	<p>You can leave a message using the contact form below. If you would like to request a research visit, please be advised that all desks in our reading room are often booked, and so you must contact the archives in advance to ensure that you will be able to do your research. <b>Booking a desk at least 4-6 weeks in advance is preferred.</b> Especially during the months of April - September, we may not be able to accommodate you on short notice.</p>
+		<p>Occasionally our responses to you are sorted into your email system's spam folder, so please ensure that you check there for any incoming messages. If you do not receive any response within 3 business days, please resubmit your inquiry. </p>
 
 
-	<form action="action_page.php">
-	  <b>Your name:</b><br>
-	  <input type="text" name="name" ><br>
-	  <b>Your e-mail:</b><br>
-	  <input type="text" name="email" ><br>
-	  <b>Subject:</b><br>
-	  <input type="text" name="subject" ><br>
-	  <b>Message:</b><br>
-	  <textarea rows="6" cols="60"></textarea><br><br>
-	  <input type="submit" value="Submit">
-	</form>
-  
+<form>
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="Your name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email Address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email address">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Message</label>
+    <textarea class="form-control" rows="10" placeholder="Your message"></textarea><br><br>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
 </div>
 {% endblock %}
