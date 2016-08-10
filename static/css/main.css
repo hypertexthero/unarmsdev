@@ -1,6 +1,6 @@
 /* custom styles to override boostrap go here */
 
-body {font-family:roboto, "helvetica neue", helvetica, arial, sans-serif;}
+body {font-family:roboto, "helvetica neue", helvetica, arial, sans-serif; padding-bottom: 20px;}
 
 a:link {color:#4B92DB;} 
 /* UN Blue */
