@@ -2,8 +2,14 @@
 
 body {font-family:roboto, "helvetica neue", helvetica, arial, sans-serif; padding-bottom: 20px;}
 
-a:link {color:#4B92DB;} 
 /* UN Blue */
+a:link {color:#4B92DB;} 
+/*.btn-info {
+    background-image: linear-gradient(to bottom, #4b97d5 0%, #4B92DB 100%);
+    border-color: #4B92DB;
+    }
+
+*/
 
 img#logo {
   float:left;

@@ -37,10 +37,21 @@
       <li><a href="/es/">Español</a></li>
     </ul>
     <form class="navbar-form pull-right">
-      <div class="form-group">
-        <input type="text" placeholder="" class="form-control" size="40">
+      {# <div class="form-group"> #}
+      {#   <input type="text" placeholder="" class="form-control" size="40"> #}
+      {# </div> #}
+      {# <button type="submit" class="btn">Search</button> #}
+      
+      <div class="input-group">
+        <input class="form-control" aria-label="Text input with multiple buttons" placeholder="Your search terms" size="40">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default">
+            This Site
+          </button>
+          <button type="button" class="btn btn-default">UN Archives</button>
+        </div>
       </div>
-      <button type="submit" class="btn">Search</button>
+      
     </form>
     <div class="navbar navbar-default">
       <div class="container">
@@ -74,7 +85,7 @@
               <a href="/book/">Book Reading Room Time</a>
             </li>
           
-            <li class="{% if_current_page '/contact.html' 'active' '' %}"><a href="{% url '/contact.html' %}">Contact Us</a></li>
+            {# <li class="{% if_current_page '/contact.html' 'active' '' %}"><a href="{% url '/contact.html' %}">Contact Us</a></li> #}
           
             <li class="dropdown{% if_current_section '/staff/' ' active' '' 'true' %}">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records Management Guidelines<b class="caret"></b></a>
@@ -145,7 +156,10 @@
         <div class="col-lg-4">
           <h4>Etc...</h4>
           <ul class="list-unstyled">
-            <li>Add etcetera links here.</li>
+            <li><a href="">Using the Archives</a></li>
+            <li><a href="">Records Management Guidance</a></li>
+            <li><a href="">Retention Schedules</a></li>
+            <li><a href="">Information Sensitivity</a></li>
             <li><a id="button" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Need A Break?</a></li>
           </ul>
         </div>
