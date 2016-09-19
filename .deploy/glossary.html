@@ -1,262 +1,206 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html class="no-js">
+  <head>    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    
+    
 
-{% block styles %}
-<style type="text/css" media="screen">
-h3 a {display:block; padding:0.25em;}
-h3.darkheadings a {color:#333; font-weight:bold;}
-div.answer {margin-bottom:2em; border-left:5px solid #eee; padding-left:1em;}
-div.answer p:first-child {margin-top:0; padding-top:1em;}
-ul.showhideanswers {float:right; list-style-type:none; margin:0; font-size:0.9em;}
-.selected a {color:#999; border:0;}
-a.showall, a.hideall {cursor:pointer;}
-</style>
-{% endblock styles %}
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    
+    <link rel="stylesheet" href="/static/css/fafaq.css" type="text/css" media="screen">
+    <noscript>
+      <style type="text/css" media="screen">
+        /* disable show/hide all links when javascript is off */
+        .showhideanswers {display:none;}
+        h3 a {text-decoration:none;}
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <a href="http://www.un.org/en/index.html" title="UN homepage."><img id="logo" src="/static/images/un-arms-logo.png" width="60" height="51" alt="UN Logo"></a>
+    <h1 id="logotitle">
+      <a href="/" title="Archives and Records Management Section homepage.">United Nations<br><small>Archives and Records Management Section</small></a>
+    </h1>
+    <h2 class="slogan">Protecting the present<br>Preserving for the future</h2> 
+    <ul class="languages">
+      <li><a href="/ar/">عربي</a></li>
+      <li><a href="/zh/">中文</a></li>
+      <li><a href="/en/">English</a></li>
+      <li><a href="/fr/">Français</a></li>
+      <li><a href="/ru/">Русский</a></li>
+      <li><a href="/es/">Español</a></li>
+    </ul>
+    <form class="navbar-form pull-right">
+      
+      
+      
+      
+      
+      <div class="input-group">
+        <input class="form-control" aria-label="Text input with multiple buttons" placeholder="Your search terms" size="40">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default">
+            This Site
+          </button>
+          <button type="button" class="btn btn-default">UN Archives</button>
+        </div>
+      </div>
+      
+    </form>
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"> 
+              <a class="navbarfirst" href="#" class="dropdown-toggle" data-toggle="dropdown">About The Archives<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class=""><a href="/about/index.html">About the Archives</a></li>
+                <li class=""><a href="/about/access.html">Access &amp; Declassification</a></li>
+                <li class=""><a href="/about/publicRef.html">Public Reference Services</a></li>
+                <li class=""><a href="/about/secretariat.html">Secretariat Departments</a></li>
+                <li class=""><a href="/about/predecessorOrg.html">Predecessor Organizations</a></li>
+                <li class=""><a href="/about/missions.html">Missions, Commissions and Related</a> </li>
+                <li class=""><a href="/about/citing.html">Citing UN Archives</a> </li>
+                <li class=""><a href="/about/copies.html">Getting Copies</a> </li>
+                <li class=""><a href="/about/external.html">External Resources</a> </li>
+                <li class=""><a href="/about/atoz.html">A-Z for Researchers</a> </li>
+              </ul>
+            </li>
 
-{% block breadcrumbs %}
-<li><a href="/">Home</a></li>
-<li class="active">FAQ</li>
-{% endblock breadcrumbs %}
+            <li class="">
+              <a href="/book/">Book Reading Room Time</a>
+            </li>
+          
+            
+          
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Records Management Guidelines<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class=""><a href="/records/staffInformation.html">What ARMS can do for you section</a></li>
+                <li class=""><a href="/records/records.html">Records Management</a>
+                  
+                  
+                  
+                  
+                </li>
+                <li class=""><a href="/records/fileScheme.html">File Schemes</a></li>
+                <li class=""><a href="/records/retentionSchedule.html">Retention Schedules</a></li>
+                <li class=""><a href="/records/policies.html">Policies and Tools</a></li>
+                <li class=""><a href="/records/forms.html">Forms</a></li>
+              
+              </ul>
+            </li>
+            <li class=""><a href="/faq.html">FAQ</a></li>
+            <li class=""><a href="/exhibitions.html">Exhibitions</a></li>
+          </ul>
 
-{% block body %}
-<div class="col-lg-6">
-<h1>Frequently Asked Questions</h1>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </div><!--/.navbar-collapse -->
+      
+      </div>
+    </div>
 
-<p>This FAQ is designed to provide a better understanding of ARMS activities, our services and our technical tools and resources. They provide basic information, sometimes about fairly complex topics. This FAQ will often link to more detailed information.</p>
-
-	<h2>About The UN Archives</h2>
-
-  <h3 id="forms">
-    <a href="#forms">Where do I get the forms I need when I want to transfer records to or request records from ARMS? </a>
-  </h3>
-  <div class="answer">
-    <p>Records transfer requests are done through the record transfer request form available on the UN Intranet (iSeek). Records retrieval requests are done using the <a href="http://archives.un.org/sites/archives.un.org/files/files/Forms/RMS_51_RecordsRequestForm.doc">Record Management Service (RMS.51).</a></p>
-  </div>
+    <div class="container">
+      <ol class="breadcrumb">
+        
+        
+      </ol>
+      
+  <div class="container">
+    <div class="col-lg-6">
+		<div id="main-content-inner" class="main-content-inner inner">
+                    <!-- content group: width = grid_width - sidebar_first_width - sidebar_second_width -->
+                    <div id="content-group" class="content-group region nested grid16-9">
+                      <div id="content-group-inner" class="content-group-inner inner">
+                        <div id="breadcrumbs" class="breadcrumbs block">
+<div id="breadcrumbs-inner" class="breadcrumbs-inner gutter">
+<h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> » <a href="/content/manage-un-records">Manage UN Records</a> » <a href="/content/un-records-resources-and-tools">UN Records Resources and Tools</a></div></div><!-- /breadcrumbs-inner -->
+</div><!-- /breadcrumbs -->
+                        
+                        <div id="content-region" class="content-region region nested">
+                          <div id="content-region-inner" class="content-region-inner inner">
+                            <a name="main-content-area" id="main-content-area"></a>
+                                                                                                                                                    <h1 class="title gutter">Glossary of Recordkeeping Terms</h1>
+                                                                                                                                                                  
+<!-- content region -->
+  <div id="content" class="region region-content content nested grid16-9">
+    <div id="content-inner" class="content-inner inner">
+      
+<div class="block-outer">
+  <div id="block-system-main" class="block block-system first last odd">
+  <div class="gutter inner clearfix">
+                  
+      <div class="content clearfix">
+        <div id="node-66" class="node node-page odd full-node clearfix">
+  <div class="inner node-inner">
   
+      
   
-  <h3 id="records">
-    <a href="#records">Why do I need to know about records?</a>
-  </h3>
-  <div class="answer">
-    <p>As a staff member of the United Nations, it is important to remember that all the information you collect or create in the conduct of business, irrespective of its format, is the property of the United Nations. Information related to business transactions constitutes official records of the UN and therefore needs to be managed effectively and efficiently to support accountability and transparency.</p>
-    <p>In order to make you fully aware of your roles and responsibilities with regard to recordkeeping ARMS has prepared the Staff reminder of the<a href="http://archives.un.org/sites/archives.un.org/files/files/STGB/ST_SGB_2007_5_eng.pdf"> rules and responsibilities for managing and disposing of Secretariat documents and records</a>.</p>
-  </div>
-
-  <h3 id="archives">
-    <a href="#archives" title="Click this link and copy the URL from the web browser address bar for a direct link to this particular FAQ.">What are archives?</a>
-  </h3>
-  <div class="answer">
-    <p>Traditionally the term has been used to describe records no longer required for current use which have been selected for permanent preservation. It can also refer the place (building/room/storage area) where archival material is kept. Finally it can mean an organisation (or part of an organisation) responsible for appraising, acquiring, preserving and making available archival material.</p>
-  </div>
+      <div id="node-top" class="node-top region nested">
+          </div>
   
-  <h3 id="changeplan">
-    <a href="#changeplan">How does the current UN reform ‘Change Plan’ affects ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>ARMS will play a pivotal role in the reform efforts, especially in improving transparency and accountability through strengthened administrative practices in the management of UN programmes and assets. Underpinning the reform objectives is the requirement to create and manage electronic and paper business records to meet transparency and accountability requirements, in other words, to ensure that the business of the United Nations is properly documented and that the resulting records are managed efficiently and effectively and remain accessible for as long as they are needed.</p>
-    <p>ARMS develops Secretariat-wide policy and provides support and practical guidance for good and accountable recordkeeping through a range of advisory services and resources. This website will help staff become familiar with rules and responsibilities for recordkeeping and to learn how ARMS can assist in improving recordkeeping practices.</p>
-  </div>
-  
-  
-  <h3 id="confidentiality">
-    <a href="#confidentiality">Should I be concerned about sending confidential records to ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>ARMS employs measures to safeguard all information for which it is responsible. We employ internal controls to monitor and track movement and use of all records that are in our custody. Our facilities have good physical security infrastructure and are monitored 24/7. And, most importantly, each staff member is aware of the special trust he or she is given; we have all been trained in and adhere to a code of ethics for archivists that reminds us of our professional responsibilities and leads to confidence in our operations.</p>
-  </div>
-  
-  <h3 id="preliminaryaccess">
-    <a href="#preliminaryaccess">Can I get access to current UN records that are not yet in the archives?</a>
-  </h3>
-  <div class="answer">
-    <p>It is possible to make an access request. In general, unclassified records are available when they are 20 years old. However, records which are less than 20 years old and not classified can be made available if the originating office gives written consent for access. You will need to send us a request via email for submission to the originating office for a decision. If granted, access allows requesters to view and take notes from approved records, but not to receive copies of the records.</p>
-    <p>ARMS provides only a secretariat role only in this process. Submitting a request for access does not guarantee that access will be granted. This is a decision that is made by the office of origin and/or other interested United Nations offices.</p>
-  </div>
-  
-  
-  <h3 id="retention">
-    <a href="#retention">What laws apply to the United Nations in relation to records retention?</a>
-  </h3>
-  <div class="answer">
-    <p>As an international organization the United Nations is not subject to national records retention laws. However, the UN adheres closely to international best practice in records retention, and memoranda of understanding between UN and its member states play a key role in the formulation of retention requirements.</p>
-  </div>
-  
-  
-  <h3 id="retentionschedulepaper">
-    <a href="#retentionschedulepaper">Do records retention schedules only apply to paper records?</a>
-  </h3>
-  <div class="answer">
-    <p>No. A records retention schedule may be applicable to either paper, electronic records or in any other format. If a record is maintained in both paper and electronic form, the creating office, in consultation with ARMS, should decide which one will serve as the official copy of the record and thus be subject to records retention requirements. The other, non-official copy simply may be destroyed whenever it loses its reference value. Note, however, that a record in electronic form may not serve as the official copy if it is not maintained in a viable recordkeeping system, as determined by ARMS.</p>
-  </div>
-  
-  
-  <h3 id="electronicrecordpresentation">
-    <a href="#electronicrecordpresentation">What is ARMS doing to preserve electronic records?</a>
-  </h3>
-  <div class="answer">
-    <p>The United Nations recognizes the need to finds ways to preserve and keep accessible and authentic the millions of electronic records being created. ARMS is participating in Secretariat-wide efforts to develop digital preservation capability and to develop a policy and governance framework for their management. You can read more about managing electronic records and the enterprise content management project on this website.</p>
-  </div>
-  
-  
-  <h3 id="sizescope">
-    <a href="#sizescope">What is the size and scope of ARMS’ operation?</a>
-  </h3>
-  <div class="answer">
-    <p>ARMS’ primary responsibilities include developing policy and guidelines for the maintenance and retention of Secretariat records including electronic media; improving recordkeeping in the United Nations; promoting and supporting research use of UN archives consistent with security and authorized access; and participating in strategic information planning organization-wide. ARMS’s mandate extends to all duty stations and to organs created by the Security Council, including peacekeeping missions, the Tribunals for the Former Yugsolavia and Rwanda, and the Compensation Commission.</p>
-    <p>In the regular budget ARMS has 5 professional posts and 14 general service posts; extrabudgetary funding provides 2 professional to support ARMS’s work in peacekeeping missions.</p>
-  </div>
-  
-  
-  <h3 id="training">
-    <a href="#training">Where can I learn more or get training in managing UN records?</a>
-  </h3>
-  <div class="answer">
-    <p>This website and the ARMS intranet page contain learning tools and other resources. You can always ask us a question: <a href="mailto:arms@un.org">arms@un.org</a>. ARMS will also undertake records management training workshop on request.</p>
-  </div>
-  
-  
-  <h3 id="importantthings">
-    <a href="#importantthings">What are the most important things I need to remember about records?</a>
-  </h3>
-  <div class="answer">
-    <p>UN staff members need to understand their responsibilities for United Nations business records and need to remember that records, like all assets, are the property of the Organisation. At the same time, staff needs to be able to identify and manage separately personal records that they create and receive in the workplace. Managing records in keeping with requirements and practice in each office is the responsibility of every staff member.</p>
-    <p>You need to list the most important groups of records and documents required to fulfill your function. You should be familiar with how these key records are protected, who has access to them and how long they need to be kept. What are you and your team members specific responsibilities? If you are not certain of the answers you should discuss with your team and possibly attend the standard ARMS training. You may also request an advisory meeting be arranged for your team.</p>
-  </div>
-  
-  
-  <h3 id="findinginformation">
-    <a href="#findinginformation">How can records management help me find information more easily?</a>
-  </h3>
-  <div class="answer">
-    <p>Records management tools can facilitate more efficient retrieval of information. File plans organise and categorise records to make information easier to find, and records retention schedules assist with easier information retrieval by disposing of records that are no longer required and retaining only those records that need to be kept for business and operational purposes.</p>
-  </div>
-  
-  
-  <h3 id="storingemail">
-    <a href="#storingemail">What should I do about e-mail? I delete it because I have no place easy to store it but I am afraid I will need it to answer to auditors or others some day.</a>
-  </h3>
-  <div class="answer">
-    <p>This is an important concern which must be addressed for the whole department or division. The Policy issues are being broadly discussed. There are some solutions available now that the ARMS staff can discuss with your Division. It may require additional tools and training for your office. However it is reasonable to request the support you require to perform your functions in a responsible manner.</p>
-  </div>
-  
-  <h3 id="researchrequirements">
-    <a href="#researchrequirements">What is required to conduct research in the UN Archives?</a>
-  </h3>
-  <div class="answer">
-    <p>Before visiting the UN Archives you will need to complete an application form and make an appointment. The form can be mailed, emailed or faxed to you upon request, or it can be downloaded from our web site.</p>
-  </div>
-
-  <h3 id="cameras">
-    <a href="#cameras">Are the researchers permitted to use their own digital cameras?</a>
-  </h3>
-  <div class="answer">
-    <p>Yes. Researchers are permitted to use digital cameras in order to make digital images of the records.</p>
-</div>
-  
-  <h3 id="warcrimescommissionrecords">
-    <a href="#warcrimescommissionrecords">How do I apply for access to records of the United Nations War Crime Commission?</a>
-  </h3>
-  <div class="answer">
-    <p>A completed application, under cover of a standard form letter, needs to be sent to the Secretary-General through your Member State's Permanent Representative or Permanent Observer to the United Nations. You can download the <a href="http://archives.un.org/sites/archives.un.org/files/files/Tools/UNWCC%20application%20package.zip">application package</a>, which includes a form, file list, sample note-verbale and access regulations here.</p>
-  </div>
-  
-  <h3 id="recordtransfertime">
-    <a href="#recordtransfertime">How long should I keep or maintain my current files in my office and how often should I transfer files to ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>Ideally, transferring records from your office to ARMS is a regular activity of your records management programme, and guidance on this question would be formalized in a retention schedule. Staff should consult retentions schedules on ARMS web-site, especially the Records Common to All United Nations Offices (RCUN). Do remember that not all records need to be transferred. You are authorized to dispose of transitory, temporary, and non-record material in your office. Consult RCUN; consult the guidelines on secure disposal or more details, ARMS staff is available to provide additional guidance in this area.</p>
-  </div>
-  
-  <h3 id="recordtransferschedule">
-    <a href="#recordtransferschedule">When do I need to transfer records to ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>There are no hard and fast rules concerning the scheduling of retiring of records, but a decision to transfer inactive records should be based on business requirements, logistical needs and scheduling considerations. This exercise should be done at regular intervals rather than during a critical period such as relocations, moves or reorganization. This would ensure an accurate transfer of records to the records facility. In this regard, there are a number of criteria as to when to transfer files. This criteria includes: level of record activity, status of the file (active/completed), volume of records vs space availability and record scheduling (ie closing records at the end of each business cycle). For more details, ARMS staff is available to provide additional guidance in this area.</p>
-  </div>
-  
-  <h3 id="recordtransferprocedure">
-    <a href="#recordtransferprocedure">How do I transfer files from my office to ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>If you are based at Headquarters and you need boxes, ARMS will supply once you have completed the first step of the records transfer process using the electronic form application on iSeek. You can consult this page prior to undertaking the transfer. If you are based in Peacekeeping Operations, it is especially important to follow the instructions in section 16 of the Recordkeeping Toolkit for Peacekeeping Operations.</p>
-  </div>
-  
-  <h3 id="posttransferrecordretrievable">
-    <a href="#posttransferrecordretrievable">Can I retrieve files once they are transferred to ARMS?</a>
-  </h3>
-  <div class="answer">
-    <p>Yes. Within access regulations, records that have been transferred to ARMS as non-current records or as archives can be consulted at ARMS during regular business. Archival records do no circulate because of their high value to the Organisation. However, non-current records can be returned to the originating office when needed for current business. You request files on form <a href="http://archives.un.org/sites/archives.un.org/files/files/Forms/RMS_51_RecordsRequestForm.doc">RMS.51</a>, ARMS offers a 48-hour service standard for retrieving files.</p>
-  </div>
-  
-  <h3 id="recordsdisposition">
-    <a href="#recordsdisposition">What is records disposition?</a>
-  </h3>
-  <div class="answer">
-    <p>This term refers to actions taken with regard to records when they are no longer active. The actions include transfer to a records centre for temporary semi-active storage, transfer of inactive records with archival value to the University Archives for permanent preservation, donation to an eligible repository, reproduction on microform, and destruction.</p>
-  </div>
-
-  <h3 id="emailrecords">
-    <a href="#emailrecords">Are emails considered records?</a>
-  </h3>
-  <div class="answer">
-    <p>Email communications can be records when they are messages created, sent or received within an email system that are required by the Organization to control, support, or document the delivery of programs, to carry out operations, to make decisions, or to account for   activities.</p>
-    <p>Some email records are transitory and required only for a limited time to ensure the completion of a routine action or the preparation of a subsequent record; some email drafts are considered transitory. You can read more about this on this web site.</p>
-  </div>
-
-  <h3 id="photographusage">
-    <a href="#photographusage">Do I need to obtain permission to post some UN photographs on my web site. If so, what is the procedure?</a>
-  </h3>
-  <div class="answer">
-    <p>ARMS does not have copyright for all photographs in its holdings. We advise you to consult with the Reference Archivist find out whether the UN own specific photographs. If the UN owns the photographs, you are permitted to place the UN photographs on the web site on condition that you acknowledge the United Nations Archives as the source. See the <a href="/sites/archives.un.org/files/files/Use%20of%20UN%20Archives/Citing%20and%20Publishing%202012.pdf">following document</a> for more details.</p>
-  </div>
-
-
-
-<!-- HERE STARTS GLOSSARY!! -->
-
-<h2>Glossary of Recordkeeping Terms</h2>
-
-<h3 id="glossary">
-  <a href="#glossary">Glossary</a>
-</h3>
-
-<div class="answer">
-  <p>The Archives and Records Management Section (ARMS) have compiled a glossary of recordkeeping terms. The glossary comprises generic definitions taken from international sources as well as definitions specific to the United Nations.</p>
-  
-<table align="center" border="0" cellpadding="3" cellspacing="0" class="alphaTable" style="width:80%">
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h3><span style="font-size:13px; line-height:1.6em">The Archives and Records Management Section (ARMS) have compiled a glossary of recordkeeping terms. The glossary comprises generic definitions taken from international sources as well as definitions specific to the United Nations.</span></h3>
+<div>
+<p>&nbsp;</p>
+<p><strong>Browse the alphabetical list</strong></p>
+<table align="center" border="1" cellpadding="0" cellspacing="1" class="alphaTable" style="width:80%">
 <tbody>
 <tr>
-<td><a href="#a">A</a></td>
-<td><a href="#b">B</a></td>
-<td><a href="#c">C</a></td>
-<td><a href="#d">D</a></td>
-<td><a href="#e">E</a></td>
-<td><a href="#f">F</a></td>
-<td><a href="#g">G</a></td>
-<td><a href="#h">H</a></td>
-<td><a href="#i">I</a></td>
-<td><a href="#j">J</a></td>
-<td><a href="#k">K</a></td>
-<td><a href="#l">L</a></td>
-<td><a href="#m">M</a></td>
-<td><a href="#n">N</a></td>
-<td><a href="#o">O</a></td>
-<td><a href="#p">P</a></td>
-<td><a href="#q">Q</a></td>
-<td><a href="#r">R</a></td>
-<td><a href="#s">S</a></td>
-<td><a href="#t">T</a></td>
-<td><a href="#u">U</a></td>
-<td><a href="#v">V</a></td>
-<td><a href="#w">W</a></td>
-<td><a href="#x">X</a></td>
-<td><a href="#y">Y</a></td>
-<td><a href="#z">Z</a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#a"><span style="background-color:rgb(255,255,255)">A</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#b"><span style="background-color:rgb(255,255,255)">B</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#c"><span style="background-color:rgb(255,255,255)">C</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#d"><span style="background-color:rgb(255,255,255)">D</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#e"><span style="background-color:rgb(255,255,255)">E</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#f"><span style="background-color:rgb(255,255,255)">F</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#g"><span style="background-color:rgb(255,255,255)">G</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#h"><span style="background-color:rgb(255,255,255)">H</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#i"><span style="background-color:rgb(255,255,255)">I</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#j"><span style="background-color:rgb(255,255,255)">J</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">K</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#l"><span style="background-color:rgb(255,255,255)">L</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#m"><span style="background-color:rgb(255,255,255)">M</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">N</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#o"><span style="background-color:rgb(255,255,255)">O</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#p"><span style="background-color:rgb(255,255,255)">P</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">Q</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#r"><span style="background-color:rgb(255,255,255)">R</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#s"><span style="background-color:rgb(255,255,255)">S</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#t"><span style="background-color:rgb(255,255,255)">T</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#u"><span style="background-color:rgb(255,255,255)">U</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#v"><span style="background-color:rgb(255,255,255)">V</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">W</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">X</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">Y</span></a></td>
+<td style="border-color:rgb(255, 255, 255)"><a href="#"><span style="background-color:rgb(255,255,255)">Z</span></a></td>
 </tr>
 </tbody>
 </table>
-
-
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -367,8 +311,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -428,8 +372,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -539,8 +483,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -568,7 +512,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>A procedure which reverses transcription by translating cipher text into plain text by means of either a code or a cryptographic system.</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -673,8 +617,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -735,8 +679,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -794,8 +738,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -813,8 +757,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -831,8 +775,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -884,7 +828,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>The HQ Records Centre where ARMS keeps records that will not be kept permanently as part of the UN Archives. Such records will ultimately be destroyed in accordance with retention scheduling.</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -906,8 +850,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -923,10 +867,10 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -950,8 +894,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -985,8 +929,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1006,7 +950,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>The official publications of the United Nations. See <em>UN Parlimentary and Official Documents</em>.</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1015,7 +959,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>Master or official copy of a UN record.</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1036,8 +980,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1087,10 +1031,10 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1205,7 +1149,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>A paper recordkeeping or filing system run by staff tasked with the creation and management of files (including storage and tracking) is centralised.</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1260,8 +1204,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1297,7 +1241,7 @@ a.showall, a.hideall {cursor:pointer;}
 <ul>
 <li>Records which are referred to infrequently and therefore are typically stored away from the work area .</li>
 </ul>
-
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1351,8 +1295,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1418,8 +1362,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1435,8 +1379,8 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-
-
+<div>&nbsp;</div>
+<p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" class="alphaTable2" style="width:100%">
 <tbody>
 <tr>
@@ -1461,27 +1405,93 @@ a.showall, a.hideall {cursor:pointer;}
 </tr>
 </tbody>
 </table>
-</div>
+<div>&nbsp;</div>
+<p>&nbsp;</p>
+<div>&nbsp;</div>
+<p>
+&nbsp;</p></div>
+<p>&nbsp;</p>
+</div></div></div>  </div>
 
-</div> {# end .col-lg-6 #}
-
-{% endblock %}
-
-{% block sidebar %}
-<div class="col-md-6">
-  {# <h3>On This Page</h3> #}
-  <ul class="list-unstyled">
-    <li>
-      <a class="showall" href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show All</a>
-    </li>
-    <li>
-      <a class="hideall" href="#"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Hide All</a>
-    </li>
-  </ul>
   
-</div>
-{% endblock sidebar %}
+  
+      <div id="node-bottom" class="node-bottom region nested">
+          </div>
+    </div>
+</div>      </div>
+    </div><!-- /block-inner -->
+  </div><!-- /block -->
+</div><!-- /block-outer -->
+    </div><!-- /content-inner -->
+  </div><!-- /content -->
+                                                          </div><!-- /content-region-inner -->
+                        </div><!-- /content-region -->
 
-{% block scripts %}
-<script src="{% static '/static/js/fafaq.js' %}"></script>
-{% endblock scripts %}
+                      </div><!-- /content-group-inner -->
+                    </div><!-- /content-group -->
+                    
+<!-- sidebar-second region -->
+  <div id="sidebar-second" class="region region-sidebar-second sidebar-second nested grid16-3 sidebar">
+    <div id="sidebar-second-inner" class="sidebar-second-inner inner">
+      
+<div class="block-outer">
+  <div id="block-gsa_integration-gsa_legends" class="block block-gsa-integration first last odd">
+  <div class="gutter inner clearfix">
+                  
+      <div class="content clearfix">
+        <div class="item-list"></div>      </div>
+    </div><!-- /block-inner -->
+  </div><!-- /block -->
+</div><!-- /block-outer -->
+    </div><!-- /sidebar-second-inner -->
+  </div><!-- /sidebar-second -->
+                  </div>
+
+    </div>
+    
+  </div>
+</div>
+
+      
+      
+    </div>
+    <div class="footer">
+      <hr>
+      <div class="container">
+
+        <div class="col-lg-4">
+          <h4>For the Public</h4>
+          <ul class="list-unstyled">
+            <li><a href="/search.html"><strong>Search</strong> the UN Archives online</a></li>
+            <li><a href="/book/index.html"><strong>Book</strong> time in the UN Archives Reading Room</a></li>
+            <li><acronym title="Frequently Asked Questions">FAQ for the Public</acronym></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h4>For UN Staff</h4>
+          <ul class="list-unstyled">
+            <li><a href="/records/staffInformation.html">Learn what ARMS can do for <strong>your section</strong></a></li>
+            <li><a href="/records/manageRecords.html">How to<strong> manage records</strong></a></li>
+            <li><acronym title="Frequently Asked Questions">FAQ for UN Staff</acronym></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4">
+          <h4>Etc...</h4>
+          <ul class="list-unstyled">
+            <li><a href="">Using the Archives</a></li>
+            <li><a href="">Records Management Guidance</a></li>
+            <li><a href="">Retention Schedules</a></li>
+            <li><a href="">Information Sensitivity</a></li>
+            <li><a id="button" href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">Need A Break?</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/jquery-3.1.0.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+
+
+</html>
