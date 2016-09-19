@@ -11,7 +11,7 @@ def copytree(src, dst):
             shutil.copy2(s, d)
 
 def postBuild(site):
-    build_folder = site._path + "/build"
+    build_folder = site._path + "/docs"
 
     for sub_file in os.listdir(build_folder):
         if sub_file[0] != ".":
