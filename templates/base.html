@@ -3,18 +3,25 @@
   <head>    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>{% block headtitle %}{% endblock headtitle %}</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
     
-    {% block styles %}{% endblock styles %}
-
+    {# {% if request.META.HTTP_HOST == "127.0.0.1:8000" %} #}
+    {# {% else %} #}
+    {# <base href="{% config "site-url" %}"> #}
+    {# {% endif %} #}
+    
+    {# =UNCOMMENT THIS BEFORE GENERATING DEPLOYABLE-TO-DOCS-AT-GITHUB VERSION #}
+    {# <base href="{% config "STATIC_URL" %}"> #}
+    
+    <link rel="stylesheet" href="{% static '/static/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static '/static/css/bootstrap-theme.css' %}">
     <link rel="stylesheet" href="{% static '/static/css/main.css' %}">
-    
-    <link rel="stylesheet" href="{% static '/static/css/fafaq.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static '/static/css/fafaq.css' %}" type="text/css" media="screen">      
+    <link rel="stylesheet" href="{% static '/static/css/jquery.dataTables.min.css' %}">
+    {% block styles %}{% endblock styles %}
     <noscript>
       <style type="text/css" media="screen">
         /* disable show/hide all links when javascript is off */
@@ -107,6 +114,7 @@
             </li>
             <li class="{% if_current_page '/faq.html' 'active' '' %}"><a href="{% url '/faq.html' %}">FAQ</a></li>
             <li class="{% if_current_page '/exhibitions.html' 'active' '' %}"><a href="{% url '/exhibitions.html' %}">Exhibitions</a></li>
+            <li class="{% if_current_page '/iconography/index.html' 'active' '' %}"><a href="{% url '/iconography/index.html' %}">Iconography</a></li>
           </ul>
 
           {# search form alternate position #}
@@ -169,6 +177,7 @@
     </div>
     <script src="{% static '/static/js/jquery-3.1.0.min.js' %}"></script>
     <script src="{% static '/static/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/static/js/jquery.dataTables.min.js' %}"></script>
   </body>
 {% block scripts %}
 {% endblock %}

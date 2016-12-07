@@ -1,4 +1,5 @@
 {
+  "STATIC_URL": "https://hypertexthero.github.io/unarmsdev/",
   "vars": {
     "@gray-base": "#000",
     "@gray-darker": "lighten(@gray-base, 13.5%)",
